@@ -1,8 +1,16 @@
-$navbar-default-bg: black;
+$navbar-default-bg: #073B15;
 @import "bootstrap";
 
 .center{
 	text-align: center;
+}
+
+.description{
+    margin-top: 0px;
+}
+
+.card-body a {
+    color: #073B15;
 }
 
 .jumbotron{

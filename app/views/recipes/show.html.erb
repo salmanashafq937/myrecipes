@@ -1,0 +1,14 @@
+<%= render '/shared/page_title', title: @recipe.name%>
+<div class="card card-body bg-light col-md-8 col-md-offset-2">
+	<h4 class="description"><strong>Description</strong></h4>
+	<hr/>
+	<%= @recipe.description%>
+	<p>
+		<span>Created By:<%= @recipe.chef.chefname%> </span>
+	</p>
+	<div class="pull-right">
+		<span>created: <%= time_ago_in_words(@recipe.created_at)%> ago </span>
+	</div>
+	
+	
+</div>
