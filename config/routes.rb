@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 	#get '/recipes/:id', to: 'recipes#show', as: 'recipe'
 	#post '/recepies', to: 'recepies#create'
 
+	get '/signup', to: 'chefs#new'
+	resources :chefs, except: [:new]
+
 
 
 end
