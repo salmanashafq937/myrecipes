@@ -1,13 +1,14 @@
 <%= render '/shared/page_title', title: "Showing All Recipes"%>
 
 <% @recipes.each do |recipe| %>
-	<div class="row text-center">
+	<div class="row">
 		<div class="col-md-2">
 			<section class="center">
 				
 			</section>
 			
 		</div>
+		
 		<div class="col-md-8 card card-body bg-light">
 			<h4><%= link_to recipe.name , recipe_path(recipe)%></h4>
 			<p><%= truncate(recipe.description, length: 150)%></p>
@@ -16,5 +17,6 @@
 			</p>
 		</div>
 	</div>
+	<br>
 
 <% end %> 

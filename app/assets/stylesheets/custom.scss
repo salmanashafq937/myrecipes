@@ -6,12 +6,19 @@ $navbar-default-bg: #073B15;
 }
 
 .description{
-    margin-top: 0px;
+    margin-top: -1px;
 }
 
 .card-body a {
     color: #073B15;
 }
+
+.center_card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+}
+
 
 .jumbotron{
 	margin-top: 30px;
@@ -42,12 +49,16 @@ $navbar-default-bg: #073B15;
 }
 
 .btn-xlarge{
-	background-color: black;
+	background-color: #073B15;
 }
 btn-xlarge:hover{
 	color: #fff;
 	text-decoration: none;
 
+}
+
+.colormatch a{
+    color: #008000;
 }
 
 /*footer */
