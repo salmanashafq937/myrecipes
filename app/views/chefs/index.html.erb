@@ -1,0 +1,13 @@
+<%= render '/shared/page_title', title: "Showing all Chefs"%>
+<div align="center">
+	<% @chef.each do |chef| %>
+		<ul class="listing">
+			<div class="row">
+				<div class="offset-md-4 col-md-4 card card-body bg-light">
+					<li class="chef-title"><%= link_to chef.chefname.capitalize, chef_path(chef)%></li>
+					<li><small><%= pluralize(chef.recipes.count, "recipe") if chef.recipes %></small></li>		
+				</div>	
+			</div>
+		</ul>
+	<% end %>
+</div>
