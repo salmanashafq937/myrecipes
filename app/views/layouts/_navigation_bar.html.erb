@@ -45,7 +45,7 @@
     <% if logged_in?%>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-            <%= current_chef.chefname.capitalize%>'s Profile
+            <%= current_chef.chefname.capitalize%>'s Profile <%= "Admin" if current_chef.admin?%>
           </a>
           <div class="dropdown-menu">
             <%= link_to "View your Profile" , chef_path(current_chef), 
