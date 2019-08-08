@@ -20,7 +20,22 @@ class ChefsController <ApplicationController
 		
 	end
 
-	def index
+
+	def edit
+		@chef= Chef.find(params[:id])
+		
+	end
+
+	def update
+		@chef= Chef.find(params[:id])
+		if @chef.update(chef_params)
+			flash[:success]= "Your account was edit successfully"
+			redirect_to chef_path(@chef)
+		else
+			render 'edit'
+		end
+
+
 		
 	end
 

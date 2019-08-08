@@ -17,6 +17,7 @@ class RecipesController <ApplicationController
 
 	#Create Action
 	def create
+		@recipe=Recipe.new(recipe_params)
 		@recipe.chef=Chef.first
 		if @recipe.save
 			flash[:success]= "Recipe was created successfully"
