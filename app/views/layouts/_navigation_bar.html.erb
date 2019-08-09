@@ -1,5 +1,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand -->
   <%= link_to "Myrecipes", root_path, class: "navbar-brand", id: "logo"%>
@@ -11,7 +11,6 @@
     </li>
     <li class="nav-item">
       <%= link_to "All Recipes" , recipes_path, :class => "nav-link"%>
-      
     </li>
 
     <!-- Dropdown -->
@@ -51,8 +50,7 @@
 
 
 
-
-  <ul class="navbar-nav">
+  <ul class="navbar-nav ml-auto">
     <!--<li class="nav-item"><%= link_to "Log in" , login_path,:class => "nav-link"%></li>-->
 
     <!-- Dropdown -->
@@ -77,7 +75,4 @@
       <%= link_to "Log in" , login_path, :class => "nav-link"%>
     <% end %>
   </ul>
-
-
-
 </nav>

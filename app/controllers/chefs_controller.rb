@@ -5,8 +5,7 @@ class ChefsController <ApplicationController
 
 
 	def index
-		@chefs=Chef.paginate(page: params[:page], per_page: 5)
-		
+		@chefs = Chef.paginate(page: params[:page], per_page: 5)
 	end
 
 	def new
@@ -14,7 +13,7 @@ class ChefsController <ApplicationController
 	end
 
 	def create
-		@chef=Chef.new(chef_params)
+		@chef = Chef.new(chef_params)
 		if @chef.save
 			session[:chef_id] = @chef.id
 			flash[:success]= "Welcome #{@chef.chefname} to Myrecipes App"

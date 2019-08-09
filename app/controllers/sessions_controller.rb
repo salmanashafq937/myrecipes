@@ -20,8 +20,6 @@ class SessionsController < ApplicationController
 		session[:chef_id] = nil
 		flash[:success] = "You have Logged out"
 		redirect_to root_path
-
-		
 	end
 
 
