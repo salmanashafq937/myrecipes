@@ -4,6 +4,9 @@
 	<h4 class=" center description"><strong>Steps</strong></h4>
 	<hr/>
 	<%= simple_format(@recipe.description)%>
+	<% if @recipe.ingredients.any?%>
+		<p>ingredients: <%= render @recipe.ingredients%></p>
+	<%end%>
 	<p class="float-right">
 		Created by: <%= @recipe.chef.chefname%>
 	</p>

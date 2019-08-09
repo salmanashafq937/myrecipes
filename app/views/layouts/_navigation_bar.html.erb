@@ -29,6 +29,20 @@
       </li>
     <%end%>  
 
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Ingredients
+        </a>
+        <div class="dropdown-menu">
+          <%= link_to "All ingredients", ingredients_path, :class => "dropdown-item"%>
+          <% Ingredient.all.each do |ingredient|%>
+            <%= link_to ingredient.name.capitalize, ingredient_path(ingredient), :class => "dropdown-item"%>
+          <% end %>
+          <% if logged_in? && current_chef.admin?%>
+            <%= link_to "New ingredient", new_ingredient_path, :class => "dropdown-item"%>
+          <% end %>
+        </div>
+      </li>
   </ul>
   <form class="form-inline">
     <input class="form-control mr-sm-2" type="text" placeholder="Search">
